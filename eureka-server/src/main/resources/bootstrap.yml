@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eureka-server
+  cloud:
+    config:
+      uri: http://localhost:8888
+      label: master
+      profile: peer3
+      name: eureka-server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: config
+          username:
+          password:
+          uri: https://github.com/zjypp/test1
+      label: master
+
+server:
+  port: 8888
+

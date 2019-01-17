@@ -1,5 +1,7 @@
 # eurekaextend
 springcloud-eureka的扩展学习，高可用集群
+使用了springlcoud-config来存储和配置各个sever的参数，参考
+https://github.com/zjypp/test1.git
 
 几个坑：
 eureka:

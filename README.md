@@ -15,3 +15,16 @@ eureka:
 
 还有eurkea-server的配置，都是需要注册到eureka中，都是true
 这样会发现在启动的时候报错，不能连接到服务，这个错误是可以忽略跳过的，因为其他同节点的server还没有启动。等其他节点都启动的时候，就会发现其实eureka其实是成功的
+
+==
+增强
+HTTP Basic认证。
+1.在配置中开启http basic认证以后
+启动的时候输入：http://eureka-peer1:8761
+会直接导向一个登陆页面，要求输入账号密码。然后才能访问控制台
+
+使用curl -i http://eureka-peer1:8761/eureka/apps ，也会提示401
+使用curl -i --basic -u admin:Xk38CNHigBP5jK75 http://eureka-peer1:8761/eureka/apps
+可以验证账号正确
+.
+eureka-server和eureka-client切换到对应的security配置文件
